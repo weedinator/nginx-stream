@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  nginx-stream:
+    image: nginx:stable
+    restart: unless-stopped
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
